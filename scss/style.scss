@@ -13,6 +13,10 @@
         padding: 10% 0 6%;
     }
 
+    @media (min-width: $desktop-xl) {
+        padding: 6% 0 4%;
+    }
+
     img {
         display: block;
         margin: 0 auto;
@@ -94,7 +98,7 @@
     &__input {
         display: block;
         margin: 0 auto;
-        padding: 0 15px 0 0;
+        padding: 0 15px 0 40px;
         width: 100%;
         background-color: $very-light-gray-cyan;
         background-repeat: no-repeat;
@@ -107,6 +111,14 @@
 
         &--bill {
             background-image: url(../images/icon-dollar.svg);
+        }
+
+        &--tip {
+            padding: 0 15px;
+
+            @media (max-width: $mobile-xs) {
+                padding: 0 10px;
+            }
         }
 
         &--split {

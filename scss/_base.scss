@@ -19,3 +19,14 @@ button, input {
 input, input::placeholder {
     color: $medium-gray-cyan;
 }
+
+// removing arrows from input
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }

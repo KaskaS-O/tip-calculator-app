@@ -40,6 +40,16 @@ input, input::placeholder {
   color: #7f9c9f;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .logo {
   padding: 12% 0;
 }
@@ -53,6 +63,12 @@ input, input::placeholder {
 @media (min-width: 1200px) {
   .logo {
     padding: 10% 0 6%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .logo {
+    padding: 6% 0 4%;
   }
 }
 
@@ -168,7 +184,7 @@ input, input::placeholder {
 .calculator__input {
   display: block;
   margin: 0 auto;
-  padding: 0 15px 0 0;
+  padding: 0 15px 0 40px;
   width: 100%;
   background-color: #f4fafa;
   background-repeat: no-repeat;
@@ -181,6 +197,16 @@ input, input::placeholder {
 
 .calculator__input--bill {
   background-image: url(../images/icon-dollar.svg);
+}
+
+.calculator__input--tip {
+  padding: 0 15px;
+}
+
+@media (max-width: 300px) {
+  .calculator__input--tip {
+    padding: 0 10px;
+  }
 }
 
 .calculator__input--split {
