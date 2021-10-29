@@ -1,3 +1,21 @@
-// font-family: 'Space Mono', monospace;
-
+@import 'variables';
 // - Font size (form inputs): 24px
+
+body {
+    position: relative;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+
+    background-color: $light-gray-cyan;
+}
+
+button, input {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    height: $element-height;
+    border-radius: 5px;
+}
+
+input, input::placeholder {
+    color: $medium-gray-cyan;
+}

@@ -15,30 +15,54 @@
 </head>
 <body>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="logo">
+    <img src="./images/logo.svg" alt="" class="logo__image">
   </div>
+
+  <div class="calculator grid-container">
+
+    <form class="calculator__form calculator__form--bill">
+      <label for="bill" class="calculator__title">Bill</label>
+      <input type="number" name="bill-amount" class="calculator__input calculator__input--bill" id="bill" value="0">
+    </form>
+
+    <form class="calculator__form calculator__form--tip">
+      <label for="tip" class="calculator__title calculator__title--tip">Select Tip %</label>
+      <button class="calculator__btn calculator__btn--tip">5%</button>
+      <button class="calculator__btn calculator__btn--tip">10%</button>
+      <button class="calculator__btn calculator__btn--tip">15%</button>
+      <button class="calculator__btn calculator__btn--tip">25%</button>
+      <button class="calculator__btn calculator__btn--tip">50%</button>
+      <input type="number" name="tip-amount" class="calculator__input calculator__input--tip" id="tip" placeholder="Custom">
+    </form>    
+
+    <form class="calculator__form calculator__form--split">
+      <label for="split" class="calculator__title">Number of People</label>
+      <input type="number" name="split-amount" class="calculator__input calculator__input--split" id="bill" value="0">
+    </form>
+
+    <div class="calculator__summary summary">
+      <div class="summary__element">
+        <span class="summary__title">Tip Amount</span>
+        <span class="summary__subtitle">/ person</span>
+        <span class="summary__amount-per-person summary__amount-per-person--tip">$0.00</span>
+      </div>
+
+      <div class="summary__element">
+        <span class="summary__title">Total</span>
+        <span class="summary__subtitle">/ person</span>
+        <span class="summary__amount-per-person summary__amount-per-person--bill-per-person">$0.00</span>
+      </div>
+
+      <button class="calculator__btn calculator__btn--reset">Reset</button>
+    </div>
+
+  </div>
+  
+  <footer class="footer"> <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">CodingDuck</a>.
+  </div></footer>
 
   <script src="./main.js"></script>
 </body>
