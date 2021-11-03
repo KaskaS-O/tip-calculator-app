@@ -33,10 +33,7 @@
     @media (min-width: $desktop-sm) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, auto);
-    }
-
-    @media (min-width: $desktop-lg) {
-        row-gap: 5em;
+        row-gap: 4em;
     }
 }
 
@@ -59,11 +56,7 @@
     @media (min-width: $desktop-sm) {
         width: 70vw;
         max-width: 900px;
-        padding: 3%;
-    }
-
-    @media (min-width: $desktop-lg) {
-        padding: 2.5%;
+        padding: 30px;
     }
 
     &__form {
@@ -78,12 +71,19 @@
         }
     }
 
-    &__title {
-        display: block;
+    &__title-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title, &__error {
         padding: 2% 0;
-        color: $dark-gray-cyan;
         font-size: 1.6em;
         font-weight: 700;
+    }
+
+    &__title {
+        color: $dark-gray-cyan;
 
         &--tip {
             grid-area: 1/1/2/3;
@@ -95,6 +95,11 @@
         }
     }
 
+    &__error {
+        display: none;
+        color: $error;
+    }
+
     &__input {
         display: block;
         margin: 0 auto;
@@ -104,10 +109,19 @@
         background-repeat: no-repeat;
         background-position: 5% center;
 
-        color: $medium-gray-cyan;
+        color: $dark-cyan;
         font-size: $input-font-size;
         font-weight: 700;
         text-align: right;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            border: 2px solid $cyan;
+            color: $dark-cyan;
+        }
 
         &--bill {
             background-image: url(../images/icon-dollar.svg);
@@ -118,6 +132,10 @@
 
             @media (max-width: $mobile-xs) {
                 padding: 0 10px;
+            }
+
+            @media (min-width: $desktop-sm) {
+                padding: 0 8px;
             }
         }
 
@@ -130,6 +148,13 @@
         border: none;
         font-size: $input-font-size;
         font-weight: 700;
+        transition: 0.1s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $cyan;
+            color: $dark-cyan;
+        }
 
         &--tip {
             background-color: $dark-cyan;
@@ -142,6 +167,10 @@
             color: $dark-cyan;
             font-size: $input-font-size * 0.8;
             text-transform: uppercase;
+
+            &:hover {
+                background-color: lighten($cyan, 30%);
+            }
         }
     }
 

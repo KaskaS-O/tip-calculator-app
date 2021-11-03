@@ -95,12 +95,7 @@ input[type=number] {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
-  }
-}
-
-@media (min-width: 1440px) {
-  .grid-container {
-    row-gap: 5em;
+    row-gap: 4em;
   }
 }
 
@@ -129,13 +124,7 @@ input[type=number] {
   .calculator {
     width: 70vw;
     max-width: 900px;
-    padding: 3%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .calculator {
-    padding: 2.5%;
+    padding: 30px;
   }
 }
 
@@ -154,12 +143,23 @@ input[type=number] {
   }
 }
 
-.calculator__title {
-  display: block;
+.calculator__title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calculator__title, .calculator__error {
   padding: 2% 0;
-  color: #5e7a7d;
   font-size: 1.6em;
   font-weight: 700;
+}
+
+.calculator__title {
+  color: #5e7a7d;
 }
 
 .calculator__title--tip {
@@ -181,6 +181,11 @@ input[type=number] {
   }
 }
 
+.calculator__error {
+  display: none;
+  color: #ca6d2f;
+}
+
 .calculator__input {
   display: block;
   margin: 0 auto;
@@ -189,10 +194,19 @@ input[type=number] {
   background-color: #f4fafa;
   background-repeat: no-repeat;
   background-position: 5% center;
-  color: #7f9c9f;
+  color: #00494d;
   font-size: 24px;
   font-weight: 700;
   text-align: right;
+}
+
+.calculator__input:hover {
+  cursor: pointer;
+}
+
+.calculator__input:focus {
+  border: 2px solid #26c0ab;
+  color: #00494d;
 }
 
 .calculator__input--bill {
@@ -209,6 +223,12 @@ input[type=number] {
   }
 }
 
+@media (min-width: 1200px) {
+  .calculator__input--tip {
+    padding: 0 8px;
+  }
+}
+
 .calculator__input--split {
   background-image: url(../images/icon-person.svg);
 }
@@ -217,6 +237,14 @@ input[type=number] {
   border: none;
   font-size: 24px;
   font-weight: 700;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.calculator__btn:hover {
+  cursor: pointer;
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 .calculator__btn--tip {
@@ -232,6 +260,10 @@ input[type=number] {
   color: #00494d;
   font-size: 19.2px;
   text-transform: uppercase;
+}
+
+.calculator__btn--reset:hover {
+  background-color: #95eadf;
 }
 
 .calculator__summary {

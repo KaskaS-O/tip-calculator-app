@@ -22,23 +22,29 @@
   <div class="calculator grid-container">
 
     <form class="calculator__form calculator__form--bill">
-      <label for="bill" class="calculator__title">Bill</label>
-      <input type="number" name="bill-amount" class="calculator__input calculator__input--bill" id="bill" value="0">
+      <div class="calculator__title-container calculator__title-container--bill">
+        <label for="bill" class="calculator__title calculator__title--bill">Bill</label>
+        <div class="calculator__error"></div>
+      </div>
+      <input type="number" name="bill-amount" class="calculator__input calculator__input--bill" id="bill" placeholder="0">
     </form>
 
     <form class="calculator__form calculator__form--tip">
       <label for="tip" class="calculator__title calculator__title--tip">Select Tip %</label>
-      <button class="calculator__btn calculator__btn--tip">5%</button>
-      <button class="calculator__btn calculator__btn--tip">10%</button>
-      <button class="calculator__btn calculator__btn--tip">15%</button>
-      <button class="calculator__btn calculator__btn--tip">25%</button>
-      <button class="calculator__btn calculator__btn--tip">50%</button>
+      <button class="calculator__btn calculator__btn--tip" id="btn5" value="5">5%</button>
+      <button class="calculator__btn calculator__btn--tip" id="btn10" value="10">10%</button>
+      <button class="calculator__btn calculator__btn--tip" id="btn15" value="15">15%</button>
+      <button class="calculator__btn calculator__btn--tip" id="btn25" value="25">25%</button>
+      <button class="calculator__btn calculator__btn--tip" id="btn50" value="50">50%</button>
       <input type="number" name="tip-amount" class="calculator__input calculator__input--tip" id="tip" placeholder="Custom">
     </form>    
 
     <form class="calculator__form calculator__form--split">
-      <label for="split" class="calculator__title">Number of People</label>
-      <input type="number" name="split-amount" class="calculator__input calculator__input--split" id="bill" value="0">
+      <div class="calculator__title-container calculator__title-container--split">
+        <label for="split" class="calculator__title calculator__title--split">Number of People</label>
+        <div class="calculator__error"></div>
+      </div>
+      <input type="number" name="split-amount" class="calculator__input calculator__input--split" id="split" placeholder="0">
     </form>
 
     <div class="calculator__summary summary">
@@ -51,7 +57,7 @@
       <div class="summary__element">
         <span class="summary__title">Total</span>
         <span class="summary__subtitle">/ person</span>
-        <span class="summary__amount-per-person summary__amount-per-person--bill-per-person">$0.00</span>
+        <span class="summary__amount-per-person summary__amount-per-person--bill">$0.00</span>
       </div>
 
       <button class="calculator__btn calculator__btn--reset">Reset</button>
