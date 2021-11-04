@@ -245,11 +245,19 @@
     }
 
     .attribution { 
+        padding-bottom: 3px;
         font-size: 11px; 
         text-align: center;
     
         a { 
             color: $dark-cyan; 
         }
+    }
+}
+
+.active {
+    &-btn {
+        color: $dark-cyan;
+        background-color: $cyan;
     }
 }

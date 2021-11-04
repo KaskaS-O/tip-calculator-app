@@ -367,10 +367,16 @@ input[type=number] {
 }
 
 .footer .attribution {
+  padding-bottom: 3px;
   font-size: 11px;
   text-align: center;
 }
 
 .footer .attribution a {
   color: #00494d;
+}
+
+.active-btn {
+  color: #00494d;
+  background-color: #26c0ab;
 }
