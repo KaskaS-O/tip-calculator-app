@@ -171,6 +171,12 @@
             &:hover {
                 background-color: lighten($cyan, 30%);
             }
+
+            &:disabled {
+                opacity: 0.3;
+                background-color: $cyan;
+                cursor: initial;
+            }
         }
     }
 

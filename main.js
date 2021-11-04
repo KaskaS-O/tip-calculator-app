@@ -36,6 +36,8 @@ const handleResetButton = () => {
   splitValue = 1;
   tipValue = 0;
 
+  btnReset.setAttribute('disabled', true);
+
   countPerPerson()
 };
 
@@ -72,6 +74,7 @@ const handleInputChange = event => {
       billValue = value;
       currentActiveEl = inputBill;
       activeTitleEl = activeEl.parentElement.firstElementChild;
+      btnReset.removeAttribute('disabled');
 
   } else if (activeEl === inputTip) {
       value = value || 0;

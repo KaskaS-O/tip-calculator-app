@@ -266,6 +266,12 @@ input[type=number] {
   background-color: #95eadf;
 }
 
+.calculator__btn--reset:disabled {
+  opacity: 0.3;
+  background-color: #26c0ab;
+  cursor: initial;
+}
+
 .calculator__summary {
   background-color: #00494d;
   padding: 12% 8% 8%;
